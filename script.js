@@ -146,7 +146,7 @@ const samplePlans = {
   ]
 };
 
-// Populate dropdown
+// Populate district dropdown
 const districtSelect = document.getElementById("district");
 Object.keys(samplePlans).forEach(d => {
   const option = document.createElement("option");
@@ -171,6 +171,15 @@ function generatePlan() {
   let html = `
     <h3>${district} Trip Plan</h3>
     <p><strong>Days:</strong> ${days} | <strong>Budget:</strong> ${budget}</p>
+
+    <iframe 
+      src="https://www.google.com/maps?q=${encodeURIComponent(district)}&output=embed"
+      width="100%" 
+      height="250" 
+      style="border:0; border-radius:10px; margin:15px 0;"
+      loading="lazy">
+    </iframe>
+
     <hr>
   `;
 
