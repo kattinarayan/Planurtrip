@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TravelEase – Smart Travel Planner</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <h1 class="logo">TravelEase</h1>
+    <nav>
+      <a href="#planner">Plan Trip</a>
+      <a href="#demo">Demo</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <h2>Your Smart Travel Companion</h2>
+    <p>Plan tension-free trips with places, prices & smart itineraries — all in one app.</p>
+    <button onclick="scrollToDemo()">Try Demo</button>
+  </section>
+
+  <!-- TRIP PLANNER -->
+  <section id="planner" class="planner">
+    <h2>Plan Your Trip</h2>
+
+    <div class="form-card">
+      <select id="district">
+        <option value="">Select District</option>
+      </select>
+
+      <select id="days">
+        <option value="">Number of Days</option>
+        <option value="1">1 Day</option>
+        <option value="2">2 Days</option>
+        <option value="3">3 Days</option>
+      </select>
+
+      <select id="budget">
+        <option value="">Budget</option>
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+
+      <button onclick="generatePlan()">Generate Plan</button>
+    </div>
+  </section>
+
+  <!-- DEMO OUTPUT -->
+  <section id="demo" class="demo">
+    <h2>Your Trip Plan</h2>
+    <div id="output" class="output-card">
+      <p>Select details and click <strong>Generate Plan</strong> to see a sample itinerary.</p>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About TravelEase</h2>
+    <p>
+      TravelEase is a smart travel planning platform that helps users discover places,
+      estimate costs, explore nearby attractions, and travel stress-free.
+    </p>
+    <p>
+      This demo showcases our vision for an all-in-one travel experience.
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 TravelEase. All rights reserved.</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
